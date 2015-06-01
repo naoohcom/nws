@@ -137,10 +137,19 @@ a img {
   width: 100px;
   margin: 20px;
 }
+.nws-nav a {
+  color: #15378c;
+}
+.nws-nav a:hover {
+  text-decoration: none;
+  color: #173d9a;
+}
 .nws-nav ul {
-  border-right: solid 1px #dddddd;
+  width: 100px;
 }
 .nws-nav ul li {
+  border-right: solid 4px #bfbfbf;
+  background: #e5e5e5;
   display: block;
   list-style: none;
   margin: 5px 0;

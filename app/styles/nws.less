@@ -13,9 +13,18 @@
 	position: absolute;
 	width: @naw-nav-width;
 	margin: @nws-margin;
+	a{
+		color : @pointColor;
+		&:hover{
+			text-decoration: none;
+			color: @pointColor*1.1;
+		}
+	}
 	ul{
-		border-right: solid 1px @nws-borderColor;
+		width: @naw-nav-width;
 		li{
+			border-right: solid 4px @nws-borderColor;
+			background: @nws-borderColor*1.2;
 			display: block;
 			list-style: none;
 			margin: @nws-margin/4 0;

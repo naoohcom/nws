@@ -3,8 +3,10 @@
 	<div class="nws-body" nws-table>
 		<div class="nws-dashboard">
 			<h1>Dash board</h1>
+
 			<ul>
-				<li ng-repeat="t in worksheetParams.category">{{ t.name }}</li>
+				<li>{{ dashboardData.totalInfo }}</li>
+				<li ng-repeat="categoryItem in dashboardData.categoryInfo">{{categoryItem}}</li>
 			</ul>
 		</div>
 		<h1><strong>Category :</strong> {{categoryName === null ? '전체' : categoryName}}</h1>
@@ -28,11 +30,17 @@
 		</div>
 
 		<div ng-if="option.type === 'all'">
+			<form>
+				<label>
+					<p>검색</p>
+					<input placeholder="검색어를 입력해 주세요" type="text" ng-model="filter">
+				</label>
 
+			</form>
 			<table ng-table="tableParams" class="table ng-table-responsive">
 				<tbody ng-repeat="group in $groups">
 				<tr class="ng-table-group">
-					<td colspan="5">
+					<td colspan="{{ worksheetParams.meta.column.length }}">
 						<a class="nws-group-collaps" href="" ng-click="group.$hideRows = !group.$hideRows">
 							<span class="glyphicon" ng-class="{ 'glyphicon-chevron-right': group.$hideRows, 'glyphicon-chevron-down': !group.$hideRows }"></span>
 							<strong>{{ group.value }}</strong>
@@ -42,7 +50,7 @@
 				<tr>
 					<th ng-repeat="(k, v) in group.data[0]">{{ k }}</th>
 				</tr>
-				<tr ng-hide="group.$hideRows" ng-repeat="user in group.data">
+				<tr ng-hide="group.$hideRows" ng-repeat="user in group.data | filter:filter">
 					<td ng-repeat="(k, v) in user" sortable="k" data-title="k">
 						<p ng-if="!httpreg(v)">{{v}}</p>
 						<a ng-if="httpreg(v)" href="{{ v }}" target="_blank" >{{v}}</a>
