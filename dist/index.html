@@ -1,9 +1,9 @@
-<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.f6063a9f.css"> <link rel="stylesheet" href="styles/nws.less">  <body ng-app="nWorkSheet"> <!--[if lt IE 7]>
+<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.css"> <link rel="stylesheet" href="styles/nws.css">  <body ng-app="angularjsApp"> <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]--> <div class="wrapper"> <nav class="nav"> <ul> <li><a ui-sref="main">main</a></li> </ul> </nav> <div ui-view> </div> </div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>!function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+<![endif]--> <div ng-controller="MainCtrl"> <nws nws-data-url="'/scripts/nwsdata.json'"></nws> </div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>!function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
 			(A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
 		r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
 	}(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 	ga('create', 'UA-XXXXX-X');
-	ga('send', 'pageview');</script> <script src="scripts/vendor.87c53bb3.js"></script> <script src="scripts/scripts.40ed0725.js"></script>  
+	ga('send', 'pageview');</script> <script src="scripts/vendor.js"></script> <script src="scripts/scripts.js"></script>  
