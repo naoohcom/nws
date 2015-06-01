@@ -1,43 +1,12 @@
 'use strict';
 angular.module('nWorkSheet', ['ngTable'])
 
-	.controller('nworksheetCtrl', function($scope, ngTableParams)
-	{
-
-		$scope.data = [
-			{name: 'Moroni', age: 50},
-			{name: 'Tiancum', age: 43},
-			{name: 'Jacob', age: 27},
-			{name: 'Nephi', age: 29},
-			{name: 'Enos', age: 34},
-			{name: 'Tiancum', age: 43},
-			{name: 'Jacob', age: 27},
-			{name: 'Nephi', age: 29},
-			{name: 'Enos', age: 34},
-			{name: 'Tiancum', age: 43},
-			{name: 'Jacob', age: 27},
-			{name: 'Nephi', age: 29},
-			{name: 'Enos', age: 34},
-			{name: 'Tiancum', age: 43},
-			{name: 'Jacob', age: 27},
-			{name: 'Nephi', age: 29},
-			{name: 'Enos', age: 34}
-		];
-
-		$scope.tableParams = new ngTableParams({
-			page: 1,            // show first page
-			count: 10           // count per page
-		}, {
-			total: $scope.data.length, // length of data
-			getData: function ($defer, params) {
-				$defer.resolve($scope.data.slice((params.page() - 1) * params.count(), params.page() * params.count()));
-			}
-		});
-	})
+	.controller('nworksheetCtrl', function($scope, ngTableParams, $filter)
+	{ })
 	.directive('nws', function($http, ngTableParams){
 		return{
 			replace : false,
-			templateUrl : '/views/nws.html',
+			templateUrl : 'views/nws.html',
 			scope : {
 				worksheetParams : '=',
 				nwsDataUrl : '='
@@ -45,7 +14,10 @@ angular.module('nWorkSheet', ['ngTable'])
 			link : function(scope)
 			{
 
+
 				scope.selectedCategory = '';
+				scope.groupBy = 'category';
+				scope.categoryName = '전체';
 
 				scope.tableParams = new ngTableParams({
 					page: 1,            // show first page
@@ -61,8 +33,18 @@ angular.module('nWorkSheet', ['ngTable'])
 					$http.get(scope.nwsDataUrl).success(function(data)
 					{
 						scope.worksheetParams = data;
-						scope.tableData = scope.worksheetParams.category[0].data;
-						scope.$broadcast('dataLoaded', {type : 'one'});
+
+						var concatedData = [];
+						for(var i = 0 ; i < scope.worksheetParams.category.length ; i ++)
+						{
+							for(var j = 0 ; j < scope.worksheetParams.category[i].data.length ; j++)
+							{
+								concatedData.push(scope.worksheetParams.category[i].data[j]);
+							}
+						}
+						scope.tableData = concatedData;
+
+						scope.$broadcast('dataLoaded', {type : 'all'});
 					});
 				}
 			},
@@ -76,7 +58,7 @@ angular.module('nWorkSheet', ['ngTable'])
 		return{
 			template : '<div>' +
 							'<ul >' +
-								'<li> <a ng-click="changeCategory()">전체</a></li>' +
+								'<li ng-click="changeCategory()"> <a>전체</a></li>' +
 								'<li ng-click="changeCategory(item.name)" ng-repeat="item in worksheetParams.category"><a style="cursor:pointer;">{{ item.name }}</a></li>' +
 							'</ul>' +
 						'</div>',
@@ -84,7 +66,7 @@ angular.module('nWorkSheet', ['ngTable'])
 			link : function(scope){
 				scope.changeCategory = function(name)
 				{
-					console.log(name);
+
 					if(name !== undefined)
 					{
 						console.log(name);
@@ -98,16 +80,15 @@ angular.module('nWorkSheet', ['ngTable'])
 						{
 							for(var j = 0 ; j < scope.worksheetParams.category[i].data.length ; j++)
 							{
-								console.log(scope.worksheetParams.category[i].data[j]);
 								concatedData.push(scope.worksheetParams.category[i].data[j]);
 							}
 							console.log(scope.tableData);
 						}
 						scope.tableData = concatedData;
 
-						console.log(scope.tableData);
 						scope.$broadcast('changed', {type : 'all'});
 					}
+					scope.categoryName = name === undefined ? '전체' : name;
 
 				};
 			}
@@ -152,9 +133,10 @@ angular.module('nWorkSheet', ['ngTable'])
 
 						scope.tableParams = new ngTableParams({
 							page: 1,            // show first page
-							count: 50          // count per page
+							count: 50,          // count per pagefilter: {
+							name: 'M'       // initial filter
 						}, {
-							groupBy: 'category',
+							groupBy: scope.groupBy,
 							total: scope.tableData.length,
 							getData: function($defer, params) {
 								var orderedData = params.sorting() ?
@@ -172,7 +154,6 @@ angular.module('nWorkSheet', ['ngTable'])
 				scope.$on('dataLoaded', function(event, option){
 					scope.getData(option);
 					triggerRelink();
-
 					scope.option = option;
 				});
 				scope.$on('changed', function(event, option){

@@ -1,9 +1,15 @@
 <div class="nws-wrapper">
 	<nav nws-menu class="nws-nav"></nav>
 	<div class="nws-body" nws-table>
-		<p><strong>Page:</strong> {{tableParams.page()}}</p>
-
+		<div class="nws-dashboard">
+			<h1>Dash board</h1>
+			<ul>
+				<li ng-repeat="t in worksheetParams.category">{{ t.name }}</li>
+			</ul>
+		</div>
+		<h1><strong>Category :</strong> {{categoryName === null ? '전체' : categoryName}}</h1>
 		<p><strong>Count per page:</strong> {{tableParams.count()}}</p>
+		<br/>
 
 		<div ng-if="option.type === 'one'">
 			<table ng-table="tableParams" class="table">
@@ -22,11 +28,12 @@
 		</div>
 
 		<div ng-if="option.type === 'all'">
+
 			<table ng-table="tableParams" class="table ng-table-responsive">
 				<tbody ng-repeat="group in $groups">
 				<tr class="ng-table-group">
-					<td colspan="4">
-						<a href="" ng-click="group.$hideRows = !group.$hideRows">
+					<td colspan="5">
+						<a class="nws-group-collaps" href="" ng-click="group.$hideRows = !group.$hideRows">
 							<span class="glyphicon" ng-class="{ 'glyphicon-chevron-right': group.$hideRows, 'glyphicon-chevron-down': !group.$hideRows }"></span>
 							<strong>{{ group.value }}</strong>
 						</a>
@@ -44,8 +51,5 @@
 				</tbody>
 			</table>
 		</div>
-
-		<!--{{ tableData.category }}-->
-
 	</div>
 </div>

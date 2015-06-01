@@ -65,7 +65,10 @@ module.exports = function (grunt) {
 					'<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
 				]
 			},less: {
-				files : 'app/styles/nws.less',
+				files : [
+					'app/styles/nws.less',
+					'app/styles/*.less'
+				],
 				tasks: 'less:dev',
 				options: {
 					interrupt: true,
@@ -355,7 +358,8 @@ module.exports = function (grunt) {
 						'*.html',
 						'views/{,*/}*.html',
 						'images/{,*/}*.{webp}',
-						'styles/fonts/{,*/}*.*'
+						'styles/fonts/{,*/}*.*',
+						'*.json'
 					]
 				}, {
 					expand: true,

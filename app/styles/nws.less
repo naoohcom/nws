@@ -1,21 +1,67 @@
 @import "reset";
-
-body{
-	background: #eeeeee;
-}
+@import "variables";
 
 .nws-wrapper {
-	margin: 20px auto;
-	padding: 20px;
-	width: 90%;
+	margin: @nws-margin;
+	background: @nws-bgColor;
+	position: relative;
+	overflow: auto;
+	font-size: @nws-textSize;
 }
 .nws-nav{
 	display: block;
 	position: absolute;
-	width: 10%;
+	width: @naw-nav-width;
+	margin: @nws-margin;
+	ul{
+		border-right: solid 1px @nws-borderColor;
+		li{
+			display: block;
+			list-style: none;
+			margin: @nws-margin/4 0;
+			padding: @nws-padding/4;
+			text-align: right;
+			cursor: pointer;
+			&:first-child
+			{
+				margin: 0 0 @nws-margin/4 0;
+			}
+		}
+	}
+}
+.nws-dashboard{
+	margin: @nws-margin 0 @nws-margin 0;
+	padding: @nws-padding;
+	background: @nws-bgColor*1.04;
+	h1{
+		margin: @nws-margin/5;
+		font-size: @nws-titleSize;
+
+	}
 }
 .nws-body{
 	display: block;
 	position: relative;
-	margin: 0 0 0 10%;
+	margin: @nws-margin @nws-margin @nws-margin (@naw-nav-width+@nws-margin*2);
+	table{
+		thead{
+			background: @nws-headColor;
+		}
+		tr{
+			&:nth-child(even){
+				background: @nws-evenColor;
+			}
+			&:nth-child(odd){
+				background: @nws-oddColor;
+			}
+			td{
+				//text-align: center;
+			}
+		}
+		.nws-group-collaps{
+			font-size: @nws-titleSize;
+			display: block;
+			padding: @nws-padding*.5;
+		}
+	}
 }
