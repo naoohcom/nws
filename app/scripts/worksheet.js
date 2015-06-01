@@ -3,7 +3,7 @@ angular.module('nWorkSheet', ['ngTable'])
 
 	.controller('nworksheetCtrl', function()
 	{ })
-	.directive('nws', function($http, ngTableParams){
+	.directive('nws', function($http){
 		return{
 			replace : false,
 			templateUrl : 'views/nws.html',
@@ -50,74 +50,100 @@ angular.module('nWorkSheet', ['ngTable'])
 				}
 				scope.$on('dataLoaded', function()
 				{
-					(scope.dashboardData = function(rawData)
-					{
-						var catInfo = [],
-							totalInfo = {
-								count : 0,
-								done : 0,
-								average : 0,
-								undone : []
-							};
-
-						// count meta category and put data
-						for(var i = 0 ; i < rawData.meta.category.length ; i ++)
-						{
-
-							var itemToPut = {
-								name : rawData.meta.category[i]
-							};
-
-							var count = 0,
-								done = 0,
-								average = 0,
-								undone = [];
-							for(var j = 0 ; j < rawData.category.length; j ++)
-							{
-								for(var k = 0 ; k < rawData.category[j].data.length ; k++)
-								{
-									var item = rawData.category[j].data[k];
-									if(item.category === itemToPut.name)
-									{
-										count ++;
-										done += item.done;
-										//for(var undones = 0 ; unodnes < item.data.length)
-										if(item.state == '진행중')
-											undone.push(item.name);
-									}
-
-									//if(item === )
-								}
-							}
-							average = (done / (count));
-
-
-							$.extend(itemToPut, {
-								count : count,
-								done :done,
-								average : average,
-								undone : undone
-							});
-
-							catInfo.push(itemToPut);
-
-						}
-
-						for(var c = 0; c < catInfo.length ; c ++ )
-						{
-							totalInfo.count += catInfo[c].count;
-							totalInfo.done += catInfo[c].done;
-							$.extend(totalInfo.undone, catInfo[c].undone) ;
-						}
-						console.log(catInfo.length);
-						totalInfo.average = totalInfo.done/ totalInfo.count;
-
-						return{
-							totalInfo : totalInfo,
-							categoryInfo : catInfo
-						}
-					}(scope.worksheetParams));
+					scope.dashboardData = getDashboardData(scope.worksheetParams);
 				});
+				function getDashboardData(rawData)
+				{
+					var catInfo = [],
+						totalInfo = {
+							count : 0,
+							done : 0,
+							average : 0,
+							undone : []
+						};
+
+					// count meta category and put data
+					for(var i = 0 ; i < rawData.meta.category.length ; i ++)
+					{
+
+						var itemToPut = {
+							name : rawData.meta.category[i]
+						};
+
+						var count = 0,
+							done = 0,
+							average = 0,
+							undone = [],
+							modifying = [],
+							complete = [],
+							del = [];
+						for(var j = 0 ; j < rawData.category.length; j ++)
+						{
+							for(var k = 0 ; k < rawData.category[j].data.length ; k++)
+							{
+								var item = rawData.category[j].data[k];
+								if(item.category === itemToPut.name)
+								{
+									count ++;
+									done += item.done;
+
+									if(item.state === '진행중')
+									{undone.push(item.name);}
+									else if(item.state === '수정중')
+									{modifying.push(item.name);}
+									else if(item.state === '완료')
+									{complete.push(item.name);}
+									else if(item.state === '삭제')
+									{del.push(item.name);}
+								}
+
+							}
+						}
+						average = (done / (count));
+
+						$.extend(itemToPut, {
+							count : count,
+							done :done,
+							average : average,
+							state : {
+								undone : undone,
+								modifying : modifying,
+								complete : complete,
+								delete : del
+							}
+
+						});
+
+						catInfo.push(itemToPut);
+
+					}
+
+					for(var c = 0; c < catInfo.length ; c ++ )
+					{
+						totalInfo.count += catInfo[c].count;
+						totalInfo.done += catInfo[c].done;
+						$.extend(totalInfo.undone, catInfo[c].undone) ;
+					}
+					console.log(catInfo.length);
+					totalInfo.average = totalInfo.done/ totalInfo.count;
+
+					return{
+						totalInfo : totalInfo,
+						categoryInfo : catInfo
+					};
+				}
+
+				scope.objectSize = function(obj) {
+					var size = 0, key;
+					for (key in obj) {
+						if (obj.hasOwnProperty(key))
+						{
+							size++;
+						}
+					}
+					return size;
+				};
+
 
 			},
 			controller : function()
@@ -141,7 +167,6 @@ angular.module('nWorkSheet', ['ngTable'])
 					var margin = 20;
 					var target = $(element);
 					var position = target.offset().top - $(window).scrollTop()  - margin;
-					console.log(position);
 					if(position <= 0 )
 					{
 						target.find('ul').css({
@@ -216,7 +241,7 @@ angular.module('nWorkSheet', ['ngTable'])
 					{
 						scope.tableParams = new ngTableParams({
 							page: 1,            // show first page
-							count: 10           // count per page
+							count: 200           // count per page
 						}, {
 							total: scope.tableData.length, // length of data
 							getData: function ($defer, params) {
@@ -228,7 +253,7 @@ angular.module('nWorkSheet', ['ngTable'])
 
 						scope.tableParams = new ngTableParams({
 							page: 1,            // show first page
-							count: 50,          // count per pagefilter: {
+							count: 200,          // count per pagefilter: {
 							name: 'M'       // initial filter
 						}, {
 							groupBy: scope.groupBy,

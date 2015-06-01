@@ -34,15 +34,15 @@
 					"name": "페이지2",
 					"pageUrl": "http://naver.com",
 					"done": 50,
-					"state": "진행중"
+					"state": "수정중"
 				},
 				{
 					"id": "page1",
 					"category": "관리자",
 					"name": "페이지3",
 					"pageUrl": "http://naver.com",
-					"done": 50,
-					"state": "진행중"
+					"done": 100,
+					"state": "완료"
 				},
 				{
 					"id": "page1",

@@ -124,9 +124,10 @@ a img {
 :focus {
   outline: 0;
 }
+/* Mixin */
 .nws-wrapper {
   margin: 20px;
-  background: #eeeeee;
+  background: #fafafa;
   position: relative;
   overflow: auto;
   font-size: 12px;
@@ -163,28 +164,108 @@ a img {
 .nws-dashboard {
   margin: 20px 0 20px 0;
   padding: 20px;
-  background: #f8f8f8;
+  background: #ffffff;
 }
 .nws-dashboard h1 {
   margin: 4px;
   font-size: 18px;
+}
+.nws-dashboard h2 {
+  margin: 5px;
+  font-size: 2.25px;
 }
 .nws-body {
   display: block;
   position: relative;
   margin: 20px 20px 20px 140px;
 }
+.nws-body > h1 {
+  font-size: 24px;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+}
+.nws-body > h2 {
+  font-size: 16.2px;
+}
+.nws-body table {
+  margin: 20px auto;
+}
 .nws-body table thead {
   background: #e9e9e9;
 }
 .nws-body table tr:nth-child(even) {
-  background: #f3f3f3;
-}
-.nws-body table tr:nth-child(odd) {
   background: #f0f0f0;
 }
-.nws-body table .nws-group-collaps {
+.nws-body table tr:nth-child(odd) {
+  background: #fdfdfd;
+}
+.nws-body table tr td {
+  padding: 8px;
+}
+.nws-body table .modifying {
+  background: #ffffbe !important;
+  color: #66511d;
+}
+.nws-body table .modifying td:last-child {
+  background: #ffca49 !important;
+  color: #000000;
+}
+.nws-body table .undone {
+  background: #c6ffff !important;
+  color: #1e425c;
+}
+.nws-body table .undone td:last-child {
+  background: #4ca5e5 !important;
+  color: #000000;
+}
+.nws-body table .complete {
+  background: #cdfffa !important;
+  color: #205426;
+}
+.nws-body table .complete td:last-child {
+  background: #4fd260 !important;
+  color: #000000;
+}
+.nws-body table .delete {
+  background: #ffffdd !important;
+  color: #532722;
+}
+.nws-body table .delete td:last-child {
+  background: #d06255 !important;
+  color: #000000;
+}
+.nws-body table .nws-table-sum tr:first-child td {
+  border-top: solid 3px #6e6e6e !important;
+  padding-top: 8px;
+}
+.nws-body table .nws-table-sum tr td {
+  border: 0 !important;
+  padding: 8px;
+}
+.nws-body table .nws-table-sum span {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.46);
+  color: #ffffff;
+  padding: 2px 4.4px;
+  margin: 0 4px;
+  border: solid 1px rgba(0, 0, 0, 0.33);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 10px;
+}
+.nws-body table .nws-group-col {
+  background: transparent !important;
+}
+.nws-body table .nws-group-col td {
+  padding: 0;
+  background: transparent;
+}
+.nws-body table .nws-group-col td a {
+  margin: 20px 0 0 0;
+  background: #fefefe;
   font-size: 18px;
   display: block;
-  padding: 10px;
+  padding: 30px 20px 10px;
 }
