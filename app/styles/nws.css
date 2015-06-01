@@ -135,6 +135,8 @@ body {
 }
 .nws-nav {
   display: block;
+  position: absolute;
+  width: 10%;
 }
 .nws-body {
   display: block;

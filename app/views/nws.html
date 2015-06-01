@@ -5,40 +5,47 @@
 
 		<p><strong>Count per page:</strong> {{tableParams.count()}}</p>
 
-		<table ng-table="tableParams" class="table">
-			<thead>
+		<div ng-if="option.type === 'one'">
+			<table ng-table="tableParams" class="table">
+				<thead>
 				<tr>
 					<th ng-repeat="(key, value) in tableParams.data[0]">{{ key }}</th>
 				</tr>
-			</thead>
-			<tr ng-repeat="(key, value) in tableParams.data">
-				<td class="nws-{{ k }}" ng-repeat="(k, v) in value" data-title="k.toString()">
-					<p ng-if="!httpreg(v)">{{v}}</p>
-					<a ng-if="httpreg(v)" href="{{ v }}" target="_blank" >{{v}}</a>
-				</td>
-			</tr>
-		</table>
-
-
-		<div ng-repeat="test in worksheetParams.category">
-			<h1>{{ test.name }}</h1>
-			<table ng-table class="table">
-				<thead>
-				<tr>
-					<th ng-repeat="(key, value) in test.data[0]">{{ key }}</th>
-				</tr>
 				</thead>
-				<tr ng-repeat="(key, value) in test.data">
+				<tr ng-repeat="(key, value) in tableParams.data">
 					<td class="nws-{{ k }}" ng-repeat="(k, v) in value" data-title="k.toString()">
 						<p ng-if="!httpreg(v)">{{v}}</p>
-						<a href="{{ v }}" ng-if="httpreg(v)">{{v}}</a>
+						<a ng-if="httpreg(v)" href="{{ v }}" target="_blank" >{{v}}</a>
 					</td>
 				</tr>
 			</table>
 		</div>
 
+		<div ng-if="option.type === 'all'">
+			<table ng-table="tableParams" class="table ng-table-responsive">
+				<tbody ng-repeat="group in $groups">
+				<tr class="ng-table-group">
+					<td colspan="4">
+						<a href="" ng-click="group.$hideRows = !group.$hideRows">
+							<span class="glyphicon" ng-class="{ 'glyphicon-chevron-right': group.$hideRows, 'glyphicon-chevron-down': !group.$hideRows }"></span>
+							<strong>{{ group.value }}</strong>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<th ng-repeat="(k, v) in group.data[0]">{{ k }}</th>
+				</tr>
+				<tr ng-hide="group.$hideRows" ng-repeat="user in group.data">
+					<td ng-repeat="(k, v) in user" sortable="k" data-title="k">
+						<p ng-if="!httpreg(v)">{{v}}</p>
+						<a ng-if="httpreg(v)" href="{{ v }}" target="_blank" >{{v}}</a>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!--{{ tableData.category }}-->
+
 	</div>
-
-	<!--{{ tableData.category }}-->
-
 </div>
