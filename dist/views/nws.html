@@ -1,16 +1,36 @@
-<div class="nws-wrapper"> <nav nws-menu class="nws-nav"></nav> <div class="nws-body" nws-table> <h1>K-ing 프론트 페이지 마크업 워크시트에 오신걸 환영합니다.</h1> <div class="nws-dashboard"> <h1>Dash board</h1> <ul> <li>{{ dashboardData.totalInfo }}</li> <li ng-repeat="categoryItem in dashboardData.categoryInfo">{{categoryItem}}</li> </ul> </div> <h2><strong>Category :</strong> {{categoryName === null ? '전체' : categoryName}}</h2> <p><strong>Count per page:</strong> {{tableParams.count()}}</p> <br> <script type="text/ng-template" id="custom/pager"><ul class="pager ng-cloak">
-				<li ng-repeat="page in pages"
-					ng-class="{'disabled': !page.active, 'previous': page.type == 'prev', 'next': page.type == 'next'}"
-					ng-show="page.type == 'prev' || page.type == 'next'" ng-switch="page.type">
-					<a ng-switch-when="prev" ng-click="params.page(page.number)" href="">&laquo; Previous</a>
-					<a ng-switch-when="next" ng-click="params.page(page.number)" href="">Next &raquo;</a>
-				</li>
-				<li>
-					<div class="btn-group">
-						<button type="button" ng-class="{'active':params.count() == 10}" ng-click="params.count(10)" class="btn btn-default">10</button>
-						<button type="button" ng-class="{'active':params.count() == 25}" ng-click="params.count(25)" class="btn btn-default">25</button>
-						<button type="button" ng-class="{'active':params.count() == 50}" ng-click="params.count(50)" class="btn btn-default">50</button>
-						<button type="button" ng-class="{'active':params.count() == 100}" ng-click="params.count(100)" class="btn btn-default">100</button>
-					</div>
-				</li>
-			</ul></script> <div ng-if="option.type === 'one'"> <table ng-table="tableParams" class="table"> <thead> <tr> <th ng-repeat="(key, value) in tableParams.data[0]">{{ key }}   <tr ng-repeat="(key, value) in tableParams.data"> <td class="nws-{{ k }}" ng-repeat="(k, v) in value" data-title="k.toString()"> <p ng-if="!httpreg(v)">{{v}}</p> <a ng-if="httpreg(v)" href="{{ v }}" target="_blank">{{v}}</a>   <tbody class="nws-table-sum" ng-if="item.name === categoryName" ng-repeat="item in dashboardData.categoryInfo"> <tr ng-class="{'modifying' : key === 'modifying', 'undone' : key === 'undone','complete' : key === 'complete','delete' : key === 'delete'}" ng-repeat="(key, state) in item.state"> <td colspan="{{ worksheetParams.meta.column.length - 1}}"> <b>{{ key }} : </b> <span ng-repeat="st in state"> {{ st }} </span>  <td> 총합 : {{objectSize(item)}} 개   </table> </div> <div ng-if="option.type === 'all'"> <form> <label> <p>검색</p> <input placeholder="검색어를 입력해 주세요" type="text" ng-model="filter"> </label> </form> <table template-pagination="custom/pager" ng-table="tableParams" class="table ng-table-responsive"> <tbody ng-repeat="group in $groups"> <tr class="nws-group-col" class="ng-table-group"> <td colspan="{{ worksheetParams.meta.column.length }}"> <a href="" ng-click="group.$hideRows = !group.$hideRows"> <span class="glyphicon" ng-class="{ 'glyphicon-chevron-right': group.$hideRows, 'glyphicon-chevron-down': !group.$hideRows }"></span> <strong>{{ group.value }}</strong> </a>   <tr> <th ng-repeat="(k, v) in group.data[0]">{{ k }}  <div ng-hide="group.$hideRows"> </div> <tr ng-hide="group.$hideRows" ng-repeat="(key, user) in group.data | filter:filter"> <td ng-repeat="(k, v) in user" sortable data-title="k"> <p ng-if="!httpreg(v)">{{v}}</p> <a ng-if="httpreg(v)" href="{{ v }}" target="_blank">{{v}}</a>   <tr ng-hide="group.$hideRows" class="nws-table-sum" ng-class="{'modifying' : key === 'modifying', 'undone' : key === 'undone','complete' : key === 'complete','delete' : key === 'delete'}" ng-repeat="(key, item) in dashboardData.categoryInfo[$index].state"> <td colspan="{{ worksheetParams.meta.column.length - 1}}"> <b>{{ key }} : </b> <span ng-repeat="undone in item"> {{ undone }} </span>  <td> 총합 : {{objectSize(item)}} 개   </table> </div> </div> </div>
+<div class="nws-wrapper"> <nav nws-menu class="nws-nav"></nav> <div class="nws-body"> <h1>K-ing 프론트 페이지 마크업 워크시트에 오신걸 환영합니다.</h1> <div ng-if="option.type === 'all'" class="nws-dashboard"> <h2>Dash board</h2> <!--<ul>
+				<li>{{ dashboardData.totalInfo }}</li>
+				<li>{{ dashboardData.categoryInfo }}</li>
+				<li ng-repeat="categoryItem in dashboardData.categoryInfo">{{categoryItem}}</li>
+			</ul>--> <p>대시보드 작성 중입니다.</p> <p>잠시만 기다려주세요. 완성되는데로 업로드 하겠습니다.</p> </div> <h2><strong>Category :</strong> {{categoryName === null ? '전체' : categoryName}}</h2> <p><strong>Count per page:</strong> {{tableParams.count()}}</p> <br> <div nws-table> <script type="text/ng-template" id="custom/pager"><ul class="pager ng-cloak">
+					<li ng-repeat="page in pages"
+						ng-class="{'disabled': !page.active, 'previous': page.type == 'prev', 'next': page.type == 'next'}"
+						ng-show="page.type == 'prev' || page.type == 'next'" ng-switch="page.type">
+						<a ng-switch-when="prev" ng-click="params.page(page.number)" href="">&laquo; Previous</a>
+						<a ng-switch-when="next" ng-click="params.page(page.number)" href="">Next &raquo;</a>
+					</li>
+					<li>
+						<div class="btn-group">
+							<button type="button"
+									ng-class="{'active':params.count() == 10}"
+									ng-click="params.count(10)"
+									class="btn btn-default">10
+							</button>
+							<button type="button"
+									ng-class="{'active':params.count() == 25}"
+									ng-click="params.count(25)"
+									class="btn btn-default">25
+							</button>
+							<button type="button"
+									ng-class="{'active':params.count() == 50}"
+									ng-click="params.count(50)"
+									class="btn btn-default">50
+							</button>
+							<button type="button"
+									ng-class="{'active':params.count() == 100}"
+									ng-click="params.count(100)"
+									class="btn btn-default">100
+							</button>
+						</div>
+					</li>
+				</ul></script> <div loading-container="tableParams.settings().$loading"> <div ng-if="option.type === 'one'"> <table ng-table="tableParams" class="table"> <thead> <tr> <th ng-repeat="(key, value) in tableParams.data[0]">{{ key }}   <tr ng-repeat="(key, value) in tableParams.data"> <td ng-class="{'modifying' : v === '수정중', 'undone' : v === '진행중','complete' : v === '완료','delete' : v === '삭제'}" class="nws-{{ k }}" ng-repeat="(k, v) in value" data-title="k.toString()"> <p ng-if="!httpreg(v)">{{v}}</p> <a ng-if="httpreg(v)" href="{{ v }}" target="_blank">{{v}}</a>   <tbody class="nws-table-sum" ng-if="item.name === categoryName" ng-repeat="item in dashboardData.categoryInfo"> <tr ng-class="{'modifying' : key === 'modifying', 'undone' : key === 'undone','complete' : key === 'complete','delete' : key === 'delete'}" ng-repeat="(key, state) in item.state"> <td colspan="{{ worksheetParams.meta.column.length - 1}}"> <b>{{ key }} : </b> <span ng-repeat="st in state"> {{ st }} </span>  <td> 총합 : {{state.length}} 개   </table> </div> <div ng-if="option.type === 'all'"> <form> <label> <p>검색</p> <input placeholder="검색어를 입력해 주세요" type="text" ng-model="filter"> </label> </form> <table template-pagination="custom/pager" ng-table="tableParams" class="table ng-table-responsive"> <tbody ng-repeat="group in $groups"> <tr class="nws-group-col" class="ng-table-group"> <td colspan="{{ worksheetParams.meta.column.length }}"> <a href="" ng-click="group.$hideRows = !group.$hideRows"> <span class="glyphicon" ng-class="{ 'glyphicon-chevron-right': group.$hideRows, 'glyphicon-chevron-down': !group.$hideRows }"></span> <strong>{{ group.value }}</strong> </a>   <tr> <th ng-repeat="(k, v) in group.data[0]">{{ k }}  <tr ng-hide="group.$hideRows" ng-repeat="(key, user) in group.data | filter:filter"> <td ng-class="{'modifying' : v === '수정중', 'undone' : v === '진행중','complete' : v === '완료','delete' : v === '삭제'}" ng-repeat="(k, v) in user" sortable data-title="'{{ k }}'"> <p ng-if="!httpreg(v)">{{v}}</p> <a ng-if="httpreg(v)" href="{{ v }}" target="_blank">{{v}}</a>   <tr ng-hide="group.$hideRows" class="nws-table-sum" ng-class="{'modifying' : key === 'modifying', 'undone' : key === 'undone','complete' : key === 'complete','delete' : key === 'delete'}" ng-repeat="(key, item) in dashboardData.categoryInfo[group.value].state"> <td colspan="{{ worksheetParams.meta.column.length - 1}}"> <b>{{ key }} : </b> <span ng-repeat="undone in item"> {{ undone }} </span>  <td colspan="1"> {{objectSize(item)}} 개   </table> </div> </div> </div> </div> </div>

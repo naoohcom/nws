@@ -166,13 +166,16 @@ a img {
   padding: 20px;
   background: #ffffff;
 }
-.nws-dashboard h1 {
+.nws-dashboard > h1 {
   margin: 4px;
-  font-size: 18px;
+  font-size: 24px;
 }
-.nws-dashboard h2 {
-  margin: 5px;
-  font-size: 2.25px;
+.nws-dashboard > h2 {
+  margin: 4px;
+  font-size: 19.2px;
+}
+.nws-dashboard > p {
+  margin: 4px;
 }
 .nws-body {
   display: block;
@@ -186,7 +189,7 @@ a img {
   text-align: center;
 }
 .nws-body > h2 {
-  font-size: 16.2px;
+  font-size: 21.6px;
 }
 .nws-body table {
   margin: 20px auto;
@@ -202,6 +205,18 @@ a img {
 }
 .nws-body table tr td {
   padding: 8px;
+}
+.nws-body table tr td .modifying {
+  background: #ffca49;
+}
+.nws-body table tr td .undone {
+  background: #4ca5e5;
+}
+.nws-body table tr td .complete {
+  background: #3af03a;
+}
+.nws-body table tr td .delete {
+  background: #d06255;
 }
 .nws-body table .modifying {
   background: #ffffbe !important;
@@ -220,11 +235,11 @@ a img {
   color: #000000;
 }
 .nws-body table .complete {
-  background: #cdfffa !important;
-  color: #205426;
+  background: #97ff97 !important;
+  color: #176017;
 }
 .nws-body table .complete td:last-child {
-  background: #4fd260 !important;
+  background: #3af03a !important;
   color: #000000;
 }
 .nws-body table .delete {
@@ -265,7 +280,7 @@ a img {
 .nws-body table .nws-group-col td a {
   margin: 20px 0 0 0;
   background: #fefefe;
-  font-size: 18px;
+  font-size: 24px;
   display: block;
   padding: 30px 20px 10px;
 }

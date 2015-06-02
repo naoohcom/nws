@@ -2,119 +2,291 @@
 	"meta": {
 		"column": [
 			"id",
+			"description",
 			"category",
 			"name",
 			"pageUrl",
-			"done",
+			"percent",
 			"state"
 		],
 		"id": "page1",
 		"category": [
-			"관리자",
+			"관리자_컨텐츠",
+			"관리자_공통",
 			"사용자",
 			"기타"
 		]
 	},
-	"id": "page1",
 	"category": [
+
 		{
-			"name": "관리자",
+			"name": "관리자_공통",
 			"data": [
 				{
-					"id": "page1",
-					"category": "관리자",
-					"name": "페이지1",
-					"pageUrl": "http://naver.com",
-					"done": 50,
-					"state": "진행중"
+					"id":"Gr1",
+					"category":"관리자_공통",
+					"name":"메인",
+					"pageUrl":"http://pengtai.geeky.kr/admin/index.html",
+					"description":"메인 화면 입니다.",
+					"state":"완료",
+					"percent":100
 				},
 				{
-					"id": "page1",
-					"category": "관리자",
-					"name": "페이지2",
-					"pageUrl": "http://naver.com",
-					"done": 50,
-					"state": "수정중"
+					"id":"Sp1.1",
+					"category":"관리자_공통",
+					"name":"메인 > Home",
+					"pageUrl":"http://pengtai.geeky.kr/admin/index.html",
+					"description":"관리자의 홈 화면입니다.",
+					"state":"완료",
+					"percent":100
 				},
 				{
-					"id": "page1",
-					"category": "관리자",
-					"name": "페이지3",
-					"pageUrl": "http://naver.com",
-					"done": 100,
-					"state": "완료"
+					"id":"Gr.1.1L",
+					"category":"관리자_공통",
+					"name":"메인 > 비밀번호변경",
+					"pageUrl":"http://pengtai.geeky.kr/admin/index.html",
+					"description":"관리자의 비밀번호를 변경합니다.(오른쪽 상단의 메뉴를 누르시면 볼 수 있습니다.)",
+					"state":"완료",
+					"percent":100
 				},
 				{
-					"id": "page1",
-					"category": "관리자",
-					"name": "페이지4",
-					"pageUrl": "http://naver.com",
-					"done": 50,
-					"state": "진행중"
+					"id":"Gr2",
+					"category":"관리자_공통",
+					"name":"로그인",
+					"pageUrl":"http://pengtai.geeky.kr/admin/login.html",
+					"description":"설명이 아직 없습니다.",
+					"state":"완료",
+					"percent":100
 				},
 				{
-					"id": "page1",
-					"category": "관리자",
-					"name": "페이지5",
-					"pageUrl": "http://naver.com",
-					"done": 50,
-					"state": "진행중"
+					"id":"Gr2.1L",
+					"category":"관리자_공통",
+					"name":"로그인 > 로그인실패",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
 				},
 				{
-					"id": "page1",
-					"category": "관리자",
-					"name": "페이지6",
-					"pageUrl": "http://naver.com",
-					"done": 50,
-					"state": "진행중"
+					"id":"Gr3",
+					"category":"관리자_공통",
+					"name":"GNB",
+					"pageUrl":"http://pengtai.geeky.kr/admin/header.html",
+					"description":"관리자 페이지의 Global navigation bar 입니다.",
+					"state":"진행중",
+					"percent":80
 				},
 				{
-					"id": "page1",
-					"category": "관리자",
-					"name": "페이지7",
-					"pageUrl": "http://naver.com",
-					"done": 50,
-					"state": "진행중"
+					"id":"Gr4",
+					"category":"관리자_공통",
+					"name":"팝업",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
 				},
 				{
-					"id": "page1",
-					"category": "관리자",
-					"name": "페이지8",
-					"pageUrl": "http://naver.com",
-					"done": 50,
-					"state": "진행중"
+					"id":"Gr4.1L",
+					"category":"관리자_공통",
+					"name":"팝업 > 레이어팝업",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
 				},
 				{
-					"id": "page1",
-					"category": "관리자",
-					"name": "페이지9",
-					"pageUrl": "http://naver.com",
-					"done": 50,
-					"state": "진행중"
+					"id":"Gr4.2P",
+					"category":"관리자_공통",
+					"name":"팝업 > 윈도우팝업",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
 				},
 				{
-					"id": "page1",
-					"category": "관리자",
-					"name": "페이지10",
-					"pageUrl": "http://naver.com",
-					"done": 50,
-					"state": "진행중"
+					"id":"Gr5",
+					"category":"관리자_공통",
+					"name":"에러페이지",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
 				},
 				{
-					"id": "page1",
-					"category": "관리자",
-					"name": "페이지11",
-					"pageUrl": "http://naver.com",
-					"done": 50,
-					"state": "진행중"
+					"id":"Gr4.1",
+					"category":"관리자_공통",
+					"name":"에러페이지 > 시스템오류",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
 				},
 				{
-					"id": "page1",
-					"category": "관리자",
-					"name": "페이지12",
-					"pageUrl": "http://naver.com",
-					"done": 50,
-					"state": "진행중"
+					"id":"Gr4.2",
+					"category":"관리자_공통",
+					"name":"에러페이지 > 네트워크오류",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
+				}
+			]
+		},
+		{
+			"name": "관리자_컨텐츠",
+			"data": [
+				{
+					"id":"Co1",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리",
+					"pageUrl":"http://not-implemented.com",
+					"description":"상품을 관리하는 페이지 입니다.",
+					"state":"진행중",
+					"percent":50
+				},
+				{
+					"id":"Co1.1",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리 > 매장등록현황",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
+				},
+				{
+					"id":"Co1.2",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리 > 매장정보등록",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":100
+				},
+				{
+					"id":"Co1.2.1",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리 > 매장정보등록 > 지하철",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
+				},
+				{
+					"id":"Co1.2.1.1.1L",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리 > 매장정보등록 > 지하철 > 우편번호찾기(한글)",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
+				},
+				{
+					"id":"Co1.2.1.1.2L",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리 > 매장정보등록 > 지하철 > 위도/경도조회(한글)",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
+				},
+				{
+					"id":"Co1.2.1.1.3.L",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리 > 매장정보등록 > 지하철 > 지역선택안내(한글)",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
+				},
+				{
+					"id":"Co1.2.1.1.4L",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리 > 매장정보등록 > 지하철 > 이미지 설명 작성(한글)",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
+				},
+				{
+					"id":"Co1.2.1.1.5L",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리 > 매장정보등록 > 지하철 > 날짜선택(한글)",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
+				},
+				{
+					"id":"Co1.2.2",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리 > 매장정보등록 > 맛집",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
+				},
+				{
+					"id":"Co1.2.1.1.1P",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리 > 매장정보등록 > 맛집 > 우편번호찾기(한글)",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
+				},
+				{
+					"id":"Co1.2.1.1.2P",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리 > 매장정보등록 > 맛집 > 위도/경도조회(한글)",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
+				},
+				{
+					"id":"Co1.2.1.1.3.P",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리 > 매장정보등록 > 맛집 > 지역선택안내(한글)",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
+				},
+				{
+					"id":"Co1.2.3",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리 > 매장정보등록 > 쇼핑",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
+				},
+				{
+					"id":"Co1.2.1.1.1P",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리 > 매장정보등록 > 쇼핑 > 우편번호찾기(한글)",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
+				},
+				{
+					"id":"Co1.2.1.1.2P",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리 > 매장정보등록 > 쇼핑 > 위도/경도조회(한글)",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
+				},
+				{
+					"id":"Co1.2.1.1.3.P",
+					"category":"관리자_컨텐츠",
+					"name":"상품관리 > 매장정보등록 > 쇼핑 > 지역선택안내(한글)",
+					"pageUrl":"http://not-implemented.com",
+					"description":"설명이 아직 없습니다.",
+					"state":"진행중",
+					"percent":50
 				}
 			]
 		},
@@ -125,8 +297,9 @@
 					"id": "page1",
 					"category": "사용자",
 					"name": "메인",
-					"pageUrl": "http://naver.com",
-					"done": 50,
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"percent": 50,
 					"state": "진행중"
 				},
 				{
@@ -134,7 +307,8 @@
 					"category": "사용자",
 					"name": "메인/세부",
 					"pageUrl": "http://regexr.com/foo.html?q=bar",
-					"done": 43,
+					"description": "설명이 아직 없습니다.",
+					"percent": 43,
 					"state": "진행중"
 				}
 			]
@@ -146,8 +320,9 @@
 					"id": "page1",
 					"category": "기타",
 					"name": "페이지13",
-					"pageUrl": "http://naver.com",
-					"done": 50,
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"percent": 50,
 					"state": "진행중"
 				},
 				{
@@ -155,7 +330,8 @@
 					"category": "기타",
 					"name": "Tiancum",
 					"pageUrl": "http://regexr.com/foo.html?q=bar",
-					"done": 43,
+					"description": "설명이 아직 없습니다.",
+					"percent": 43,
 					"state": "진행중"
 				}
 			]

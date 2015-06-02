@@ -54,7 +54,7 @@ angular.module('nWorkSheet', ['ngTable'])
 				});
 				function getDashboardData(rawData)
 				{
-					var catInfo = [],
+					var catInfo = {},
 						totalInfo = {
 							count : 0,
 							done : 0,
@@ -114,7 +114,7 @@ angular.module('nWorkSheet', ['ngTable'])
 
 						});
 
-						catInfo.push(itemToPut);
+						catInfo[itemToPut.name] = itemToPut;
 
 					}
 
@@ -122,9 +122,8 @@ angular.module('nWorkSheet', ['ngTable'])
 					{
 						totalInfo.count += catInfo[c].count;
 						totalInfo.done += catInfo[c].done;
-						$.extend(totalInfo.undone, catInfo[c].undone) ;
+						$.extend(totalInfo.n, catInfo[c].n) ;
 					}
-					console.log(catInfo.length);
 					totalInfo.average = totalInfo.done/ totalInfo.count;
 
 					return{
@@ -155,11 +154,11 @@ angular.module('nWorkSheet', ['ngTable'])
 	{
 		return{
 			template : '<div style="position:relative;">' +
-							'<ul >' +
-								'<li ng-click="changeCategory()"> <a>전체</a></li>' +
-								'<li ng-click="changeCategory(item.name)" ng-repeat="item in worksheetParams.category"><a style="cursor:pointer;">{{ item.name }}</a></li>' +
-							'</ul>' +
-						'</div>',
+			'<ul >' +
+			'<li ng-click="changeCategory()"> <a>전체</a></li>' +
+			'<li ng-click="changeCategory(item.name)" ng-repeat="item in worksheetParams.category"><a style="cursor:pointer;">{{ item.name }}</a></li>' +
+			'</ul>' +
+			'</div>',
 			require : '^nws',
 			link : function(scope, element){
 
@@ -189,12 +188,13 @@ angular.module('nWorkSheet', ['ngTable'])
 
 					if(name !== undefined)
 					{
-						console.log(name);
 						var filter = $filter('filter')(scope.worksheetParams.category, {'name' : name})[0].data;
+
 						scope.tableData = filter;
-						console.log(name + ', ' + scope.tableData);
 						scope.$broadcast('changed', {type : 'one'});
+
 					}else{
+
 						var concatedData = [];
 						for(var i = 0 ; i < scope.worksheetParams.category.length ; i ++)
 						{
@@ -202,7 +202,6 @@ angular.module('nWorkSheet', ['ngTable'])
 							{
 								concatedData.push(scope.worksheetParams.category[i].data[j]);
 							}
-							console.log(scope.tableData);
 						}
 						scope.tableData = concatedData;
 
@@ -232,6 +231,7 @@ angular.module('nWorkSheet', ['ngTable'])
 					transclude(function (clone) {
 						element.parent().append(clone);
 						previousContent = clone;
+
 					});
 				};
 
@@ -241,7 +241,8 @@ angular.module('nWorkSheet', ['ngTable'])
 					{
 						scope.tableParams = new ngTableParams({
 							page: 1,            // show first page
-							count: 200           // count per page
+							count: 200,           // count per page
+							//name: 'M'       // initial filter
 						}, {
 							total: scope.tableData.length, // length of data
 							getData: function ($defer, params) {
@@ -254,7 +255,7 @@ angular.module('nWorkSheet', ['ngTable'])
 						scope.tableParams = new ngTableParams({
 							page: 1,            // show first page
 							count: 200,          // count per pagefilter: {
-							name: 'M'       // initial filter
+							//name: 'M',      // initial filter
 						}, {
 							groupBy: scope.groupBy,
 							total: scope.tableData.length,
@@ -269,17 +270,31 @@ angular.module('nWorkSheet', ['ngTable'])
 					}
 				};
 
+				var replace = function()
+				{
+
+				};
+
 				triggerRelink();
 
 				scope.$on('dataLoaded', function(event, option){
 					scope.getData(option);
 					triggerRelink();
 					scope.option = option;
+
+					scope.tableParams.reload();
+
+					replace();
 				});
 				scope.$on('changed', function(event, option){
 					scope.getData(option);
 					triggerRelink();
 					scope.option = option;
+
+					scope.tableParams.reload();
+
+
+					replace();
 				});
 			}
 		};
