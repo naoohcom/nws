@@ -1,12 +1,12 @@
-# angularjs
+# Naooh Work Sheet (nws)
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.11.1.
+나오닷컴이 만드는 angularjs 사용 가능한 worksheet 모듈 입니다.
 
-## Build & development
+## 아직 Draft 단계입니다.
 
-Run `grunt` for building and `grunt serve` for preview.
+  현재 nws는 개발 드래프트 단계입니다. 완성되는데로 Documentaion을 작성하도록 하겠습니다.
+  
+## 연락처
 
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
+  나오닷컴 : naoohcom@gmail.com
+  모듈 작성자 : yunchan@naooh.com
