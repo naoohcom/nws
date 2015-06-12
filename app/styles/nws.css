@@ -177,6 +177,10 @@ a img {
 .nws-dashboard > p {
   margin: 4px;
 }
+.nws-dashboard .nws-dashboard-percent {
+  font-size: 16.8px;
+  color: #15378c;
+}
 .nws-body {
   display: block;
   position: relative;

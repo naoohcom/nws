@@ -5,288 +5,1633 @@
 			"description",
 			"category",
 			"name",
+			"type",
 			"pageUrl",
 			"percent",
 			"state"
 		],
-		"id": "page1",
 		"category": [
-			"관리자_컨텐츠",
 			"관리자_공통",
-			"사용자",
-			"기타"
+			"관리자_어드민",
+			"관리자_판매자_컨텐츠",
+			"관리자_고객관리",
+			"관리자_통계",
+			"관리자_쇼핑앱",
+			"사용자"
 		]
 	},
 	"category": [
-
 		{
 			"name": "관리자_공통",
 			"data": [
 				{
-					"id":"Gr1",
-					"category":"관리자_공통",
-					"name":"메인",
-					"pageUrl":"http://pengtai.geeky.kr/admin/index.html",
-					"description":"메인 화면 입니다.",
-					"state":"완료",
-					"percent":100
+					"id": "Gr1",
+					"category": "관리자_공통",
+					"name": "메인",
+					"type": "conceptual",
+					"pageUrl": "http://pengtai.geeky.kr/admin/index.html",
+					"description": "메인 화면 입니다.",
+					"state": "완료",
+					"percent": 100
 				},
 				{
-					"id":"Sp1.1",
-					"category":"관리자_공통",
-					"name":"메인 > Home",
-					"pageUrl":"http://pengtai.geeky.kr/admin/index.html",
-					"description":"관리자의 홈 화면입니다.",
-					"state":"완료",
-					"percent":100
+					"id": "Sp1.1",
+					"category": "관리자_공통",
+					"name": "메인 > Home",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/index.html",
+					"description": "관리자의 홈 화면입니다.",
+					"state": "완료",
+					"percent": 100
 				},
 				{
-					"id":"Gr.1.1L",
-					"category":"관리자_공통",
-					"name":"메인 > 비밀번호변경",
-					"pageUrl":"http://pengtai.geeky.kr/admin/index.html",
-					"description":"관리자의 비밀번호를 변경합니다.(오른쪽 상단의 메뉴를 누르시면 볼 수 있습니다.)",
-					"state":"완료",
-					"percent":100
+					"id": "Gr.1.1L",
+					"category": "관리자_공통",
+					"name": "메인 > 비밀번호변경",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/index.html",
+					"description": "관리자의 비밀번호를 변경합니다.(오른쪽 상단의 메뉴를 누르시면 볼 수 있습니다.)",
+					"state": "완료",
+					"percent": 100
 				},
 				{
-					"id":"Gr2",
-					"category":"관리자_공통",
-					"name":"로그인",
-					"pageUrl":"http://pengtai.geeky.kr/admin/login.html",
-					"description":"설명이 아직 없습니다.",
-					"state":"완료",
-					"percent":100
+					"id": "Gr2",
+					"category": "관리자_공통",
+					"name": "로그인",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/login.html",
+					"description": "설명이 아직 없습니다.",
+					"state": "완료",
+					"percent": 100
 				},
 				{
-					"id":"Gr2.1L",
-					"category":"관리자_공통",
-					"name":"로그인 > 로그인실패",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Gr2.1L",
+					"category": "관리자_공통",
+					"name": "로그인 > 로그인실패",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
 				},
 				{
-					"id":"Gr3",
-					"category":"관리자_공통",
-					"name":"GNB",
-					"pageUrl":"http://pengtai.geeky.kr/admin/header.html",
-					"description":"관리자 페이지의 Global navigation bar 입니다.",
-					"state":"진행중",
-					"percent":80
+					"id": "Gr3",
+					"category": "관리자_공통",
+					"name": "GNB",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/header.html",
+					"description": "관리자 페이지의 Global navigation bar 입니다.",
+					"state": "진행중",
+					"percent": 80
 				},
 				{
-					"id":"Gr4",
-					"category":"관리자_공통",
-					"name":"팝업",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Gr4",
+					"category": "관리자_공통",
+					"name": "팝업",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
 				},
 				{
-					"id":"Gr4.1L",
-					"category":"관리자_공통",
-					"name":"팝업 > 레이어팝업",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Gr4.1L",
+					"category": "관리자_공통",
+					"name": "팝업 > 레이어팝업",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
 				},
 				{
-					"id":"Gr4.2P",
-					"category":"관리자_공통",
-					"name":"팝업 > 윈도우팝업",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Gr4.2P",
+					"category": "관리자_공통",
+					"name": "팝업 > 윈도우팝업",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
 				},
 				{
-					"id":"Gr5",
-					"category":"관리자_공통",
-					"name":"에러페이지",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Gr5",
+					"category": "관리자_공통",
+					"name": "에러페이지",
+					"type": "conceptual",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
 				},
 				{
-					"id":"Gr4.1",
-					"category":"관리자_공통",
-					"name":"에러페이지 > 시스템오류",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Gr4.1",
+					"category": "관리자_공통",
+					"name": "에러페이지 > 시스템오류",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
 				},
 				{
-					"id":"Gr4.2",
-					"category":"관리자_공통",
-					"name":"에러페이지 > 네트워크오류",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Gr4.2",
+					"category": "관리자_공통",
+					"name": "에러페이지 > 네트워크오류",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
 				}
 			]
 		},
 		{
-			"name": "관리자_컨텐츠",
+			"name": "관리자_어드민",
 			"data": [
 				{
-					"id":"Co1",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리",
-					"pageUrl":"http://not-implemented.com",
-					"description":"상품을 관리하는 페이지 입니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Ad1",
+					"category": "관리자_어드민",
+					"name": "어드민관리",
+					"type": "conceptual",
+					"pageUrl": "http://pengtai.geeky.kr/admin/index.html",
+					"description": "메인 화면 입니다.",
+					"state": "진행중",
+					"percent": 0
 				},
 				{
-					"id":"Co1.1",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리 > 매장등록현황",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Ad1.1",
+					"category": "관리자_어드민",
+					"name": "어드민관리 > 어드민현황",
+					"type": "conceptual",
+					"pageUrl": "http://pengtai.geeky.kr/admin/index.html",
+					"description": "관리자의 홈 화면입니다.",
+					"state": "진행중",
+					"percent": 0
 				},
 				{
-					"id":"Co1.2",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리 > 매장정보등록",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":100
+					"id": "Ad1.1.1",
+					"category": "관리자_어드민",
+					"name": "어드민관리 > 어드민현황 > 판매자현황관리",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/index.html",
+					"description": "관리자의 홈 화면입니다.",
+					"state": "진행중",
+					"percent": 0
 				},
 				{
-					"id":"Co1.2.1",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리 > 매장정보등록 > 지하철",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Ad1.1.1.1",
+					"category": "관리자_어드민",
+					"name": "어드민관리 > 어드민현황 > 판매자현황관리 > 판매자계정등록",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/index.html",
+					"description": "관리자의 홈 화면입니다.",
+					"state": "진행중",
+					"percent": 0
 				},
 				{
-					"id":"Co1.2.1.1.1L",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리 > 매장정보등록 > 지하철 > 우편번호찾기(한글)",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Ad1.2",
+					"category": "관리자_어드민",
+					"name": "어드민관리 > 푸시",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/index.html",
+					"description": "관리자의 비밀번호를 변경합니다.(오른쪽 상단의 메뉴를 누르시면 볼 수 있습니다.)",
+					"state": "진행중",
+					"percent": 0
 				},
 				{
-					"id":"Co1.2.1.1.2L",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리 > 매장정보등록 > 지하철 > 위도/경도조회(한글)",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Ad1.2.1",
+					"category": "관리자_어드민",
+					"name": "어드민관리 > 푸시 > 푸시등록",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/index.html",
+					"description": "관리자의 비밀번호를 변경합니다.(오른쪽 상단의 메뉴를 누르시면 볼 수 있습니다.)",
+					"state": "진행중",
+					"percent": 0
 				},
 				{
-					"id":"Co1.2.1.1.3.L",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리 > 매장정보등록 > 지하철 > 지역선택안내(한글)",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Ad1.4",
+					"category": "관리자_어드민",
+					"name": "어드민관리 > 공지사항",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/login.html",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},{
+					"id": "Ad1.4.1",
+					"category": "관리자_어드민",
+					"name": "어드민관리 > 공지사항 > 공지사항등록",
+					"type": "conceptual",
+					"pageUrl": "http://pengtai.geeky.kr/admin/login.html",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},{
+					"id": "Ad1.4.1.1T",
+					"category": "관리자_어드민",
+					"name": "어드민관리 > 공지사항 > 공지사항등록(한글)",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/login.html",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},{
+					"id": "Ad1.4.1.2T",
+					"category": "관리자_어드민",
+					"name": "어드민관리 > 공지사항 > 공지사항등록(간체)",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/login.html",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},{
+					"id": "Ad1.4.1.3T",
+					"category": "관리자_어드민",
+					"name": "어드민관리 > 공지사항 > 공지사항등록(번체)",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/login.html",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},{
+					"id": "Ad1.4.1.4T",
+					"category": "관리자_어드민",
+					"name": "어드민관리 > 공지사항 > 공지사항등록(영어)",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/login.html",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},{
+					"id": "Ad1.4.1.5T",
+					"category": "관리자_어드민",
+					"name": "어드민관리 > 공지사항 > 공지사항등록(일어)",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/login.html",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
 				},
 				{
-					"id":"Co1.2.1.1.4L",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리 > 매장정보등록 > 지하철 > 이미지 설명 작성(한글)",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Ad1.7",
+					"category": "관리자_어드민",
+					"name": "어드민관리 > 회원관리",
+					"type": "conceptual",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
 				},
 				{
-					"id":"Co1.2.1.1.5L",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리 > 매장정보등록 > 지하철 > 날짜선택(한글)",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Ad1.7.1",
+					"category": "관리자_어드민",
+					"name": "어드민관리 > 회원관리 > 쇼핑앱회원관리",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/header.html",
+					"description": "관리자 페이지의 Global navigation bar 입니다.",
+					"state": "진행중",
+					"percent": 0
+				}
+			]
+		},
+		{
+			"name": "관리자_판매자_컨텐츠",
+			"data": [
+				{
+					"id": "Co1",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "상품을 관리하는 페이지 입니다.",
+					"state": "진행중",
+					"percent": 0
 				},
 				{
-					"id":"Co1.2.2",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리 > 매장정보등록 > 맛집",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Co1.1",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리 > 매장등록현황",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/registered-shop-manage.html",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 90
 				},
 				{
-					"id":"Co1.2.1.1.1P",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리 > 매장정보등록 > 맛집 > 우편번호찾기(한글)",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Co1.2",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리 > 매장정보등록",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/admin/register-shop.html",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 80
 				},
 				{
-					"id":"Co1.2.1.1.2P",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리 > 매장정보등록 > 맛집 > 위도/경도조회(한글)",
-					"pageUrl":"http://not-implemented.com",
-					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"id": "Co1.2.1",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리 > 매장정보등록 > 지하철",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
 				},
 				{
-					"id":"Co1.2.1.1.3.P",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리 > 매장정보등록 > 맛집 > 지역선택안내(한글)",
-					"pageUrl":"http://not-implemented.com",
+					"id": "Co1.2.1.1.1L",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리 > 매장정보등록 > 지하철 > 우편번호찾기(한글)",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},
+				{
+					"id": "Co1.2.1.1.2L",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리 > 매장정보등록 > 지하철 > 위도/경도조회(한글)",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},
+				{
+					"id": "Co1.2.1.1.3.L",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리 > 매장정보등록 > 지하철 > 지역선택안내(한글)",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},
+				{
+					"id": "Co1.2.1.1.4L",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리 > 매장정보등록 > 지하철 > 이미지 설명 작성(한글)",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},
+				{
+					"id": "Co1.2.1.1.5L",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리 > 매장정보등록 > 지하철 > 날짜선택(한글)",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},
+				{
+					"id": "Co1.2.2",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리 > 매장정보등록 > 맛집",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},
+				{
+					"id": "Co1.2.1.1.1P",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리 > 매장정보등록 > 맛집 > 우편번호찾기(한글)",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},
+				{
+					"id": "Co1.2.1.1.2P",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리 > 매장정보등록 > 맛집 > 위도/경도조회(한글)",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},
+				{
+					"id": "Co1.2.1.1.3.P",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리 > 매장정보등록 > 맛집 > 지역선택안내(한글)",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},
+				{
+					"id": "Co1.2.3",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리 > 매장정보등록 > 쇼핑",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},
+				{
+					"id": "Co1.2.1.1.1P",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리 > 매장정보등록 > 쇼핑 > 우편번호찾기(한글)",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},
+				{
+					"id": "Co1.2.1.1.2P",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리 > 매장정보등록 > 쇼핑 > 위도/경도조회(한글)",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				},
+				{
+					"id": "Co1.2.1.1.3.P",
+					"category": "관리자_판매자_컨텐츠",
+					"name": "상품관리 > 매장정보등록 > 쇼핑 > 지역선택안내(한글)",
+					"type": "normal",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"state": "진행중",
+					"percent": 0
+				}
+			]
+		},
+		{
+			"name": "관리자_고객관리",
+			"data": [
+				{
+					"id": "Cs1",
+					"category": "관리자_고객관리",
+					"name": "고객관리",
+					"type": "conceptual",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"percent": 0,
+					"state": "진행중"
+				},
+				{
+					"id": "Cs1.1",
+					"category": "관리자_고객관리",
+					"name": "고객관리 > 고객관리",
+					"type": "normal",
+					"pageUrl": "http://regexr.com/foo.html?q=bar",
+					"description": "설명이 아직 없습니다.",
+					"percent": 0,
+					"state": "진행중"
+				},
+				{
+					"id": "Cs1.1.1.1",
+					"category": "관리자_고객관리",
+					"name": "고객관리 > 고객관리 > 문의상세",
+					"type": "normal",
+					"pageUrl": "http://regexr.com/foo.html?q=bar",
+					"description": "설명이 아직 없습니다.",
+					"percent": 0,
+					"state": "진행중"
+				},
+				{
+					"id": "Cs1.1.5T",
+					"category": "관리자_고객관리",
+					"name": "고객관리 > 고객관리 > 쇼핑앱",
+					"type": "normal",
+					"pageUrl": "http://regexr.com/foo.html?q=bar",
+					"description": "설명이 아직 없습니다.",
+					"percent": 0,
+					"state": "진행중"
+				},
+				{
+					"id": "Cs1.2",
+					"category": "관리자_고객관리",
+					"name": "고객관리 > 판매자문의현황",
+					"type": "normal",
+					"pageUrl": "http://regexr.com/foo.html?q=bar",
+					"description": "설명이 아직 없습니다.",
+					"percent": 0,
+					"state": "진행중"
+				},
+				{
+					"id": "Cs1.2.1",
+					"category": "관리자_고객관리",
+					"name": "고객관리 > 판매자문의현황 > 문의상세",
+					"type": "normal",
+					"pageUrl": "http://regexr.com/foo.html?q=bar",
+					"description": "설명이 아직 없습니다.",
+					"percent": 0,
+					"state": "진행중"
+				}
+			]
+		},
+		{
+			"name": "관리자_통계",
+			"data": [
+				{
+					"id": "St1",
+					"category": "관리자_통계",
+					"name": "통계관리",
+					"type": "conceptual",
+					"pageUrl": "http://not-implemented.com",
+					"description": "설명이 아직 없습니다.",
+					"percent": 0,
+					"state": "진행중"
+				},
+				{
+					"id": "St1.1",
+					"category": "관리자_통계",
+					"name": "통계관리 > App이용현황",
+					"type": "normal",
+					"pageUrl": "http://regexr.com/foo.html?q=bar",
+					"description": "설명이 아직 없습니다.",
+					"percent": 0,
+					"state": "진행중"
+				},
+				{
+					"id": "St1.3",
+					"category": "관리자_통계",
+					"name": "통계관리 > 컨텐츠",
+					"type": "normal",
+					"pageUrl": "http://regexr.com/foo.html?q=bar",
+					"description": "설명이 아직 없습니다.",
+					"percent": 0,
+					"state": "진행중"
+				},
+				{
+					"id": "St1.3.2",
+					"category": "관리자_통계",
+					"name": "통계관리 > 컨텐츠 > 쇼핑",
+					"type": "normal",
+					"pageUrl": "http://regexr.com/foo.html?q=bar",
+					"description": "설명이 아직 없습니다.",
+					"percent": 0,
+					"state": "진행중"
+				},
+				{
+					"id": "St1.9",
+					"category": "관리자_통계",
+					"name": "통계관리 > 브랜드",
+					"type": "normal",
+					"pageUrl": "http://regexr.com/foo.html?q=bar",
+					"description": "설명이 아직 없습니다.",
+					"percent": 0,
+					"state": "진행중"
+				},
+				{
+					"id": "St1.10",
+					"category": "관리자_통계",
+					"name": "통계관리 > 배너",
+					"type": "normal",
+					"pageUrl": "http://regexr.com/foo.html?q=bar",
+					"description": "설명이 아직 없습니다.",
+					"percent": 0,
+					"state": "진행중"
+				},
+				{
+					"id": "St1.11",
+					"category": "관리자_통계",
+					"name": "통계관리 > 메인",
+					"type": "normal",
+					"pageUrl": "http://regexr.com/foo.html?q=bar",
+					"description": "설명이 아직 없습니다.",
+					"percent": 0,
+					"state": "진행중"
+				},
+				{
+					"id": "St1.12",
+					"category": "관리자_통계",
+					"name": "통계관리 > 푸시",
+					"type": "normal",
+					"pageUrl": "http://regexr.com/foo.html?q=bar",
+					"description": "설명이 아직 없습니다.",
+					"percent": 0,
+					"state": "진행중"
+				},
+				{
+					"id": "St1.13",
+					"category": "관리자_통계",
+					"name": "통계관리 > 회원",
+					"type": "normal",
+					"pageUrl": "http://regexr.com/foo.html?q=bar",
+					"description": "설명이 아직 없습니다.",
+					"percent": 0,
+					"state": "진행중"
+				}
+			]
+		},
+		{
+			"name": "관리자_쇼핑앱",
+			"data": [
+				{
+					"id":"Sp1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱",
+					"type":"conceptual",
+					"pageUrl":"",
 					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > Home",
+					"type":"normal",
+					"pageUrl":"http://pengtai.geeky.kr/admin/views/shopping/main.html",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 메인배너관리",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.1.1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 메인배너관리 > 배너등록",
+					"type":"conceptual",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.1.1.1T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 메인배너관리 > 배너등록(한글)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.1.1.2T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 메인배너관리 > 배너등록(간체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.1.1.3T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 메인배너관리 > 배너등록(번체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.1.1.4T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 메인배너관리 > 배너등록(영어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.1.1.4T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 메인배너관리 > 배너등록(일어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.2",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 리스트배너관리",
+					"type":"conceptual",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.2.1T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 리스트배너관리 > 트렌드",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.2.2T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 리스트배너관리 > 뷰티",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.2.2T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 리스트배너관리 > 뷰티 > 리스트배너등록",
+					"type":"conceptual",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.2.2.1T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 리스트배너관리 > 뷰티 > 리스트배너등록(한글)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.2.2.2T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 리스트배너관리 > 뷰티 > 리스트배너등록(간체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.2.2.3T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 리스트배너관리 > 뷰티 > 리스트배너등록(번체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.2.2.4T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 리스트배너관리 > 뷰티 > 리스트배너등록(영어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.2.2.5T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 리스트배너관리 > 뷰티 > 리스트배너등록(일어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.3",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 상품노출관리",
+					"type":"conceptual",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.3.1T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 상품노출관리 > 트렌드",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.3.2T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 상품노출관리 > 트렌드 > 뷰티",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.3.2.1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 상품노출관리 > 트렌드 > 뷰티 > 메인상품등록",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.4",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 이벤트관리",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.4.1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 이벤트관리 > 이벤트등록",
+					"type":"conceptual",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.4.1.1T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 이벤트관리 > 이벤트등록(한글)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.4.1.2T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 이벤트관리 > 이벤트등록(간체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.4.1.3T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 이벤트관리 > 이벤트등록(번체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.4.1.4T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 이벤트관리 > 이벤트등록(영어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.2.4.1.5T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 메인관리 > 이벤트관리 > 이벤트등록(일어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"SP1.3",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관리",
+					"type":"conceptual",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.3.1T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관리 > 트렌드",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.3.2T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관리 > 뷰티",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.3.2.1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관리 > 뷰티 > 브랜드등록",
+					"type":"conceptual",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.3.2.1.1T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관리 > 뷰티 > 브랜드등록(한글)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.3.2.1.2T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관리 > 뷰티 > 브랜드등록(간체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.3.2.1.3T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관리 > 뷰티 > 브랜드등록(번체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.3.2.1.4T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관리 > 뷰티 > 브랜드등록(영어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.3.2.1.5T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관리 > 뷰티 > 브랜드등록(일어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.4",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리",
+					"type":"conceptual",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.4.1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 브랜드정보관리",
+					"type":"conceptual",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.4.1.1T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 브랜드정보관리(한글)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.4.1.2T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 브랜드정보관리(간체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.4.1.3T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 브랜드정보관리(번체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.4.1.4T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 브랜드정보관리(영어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.4.1.5T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 브랜드정보관리(일어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
 				},
 				{
 					"id":"Co1.2.3",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리 > 매장정보등록 > 쇼핑",
-					"pageUrl":"http://not-implemented.com",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 매장등록",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
 					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Co1.2.3.1T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 매장등록(한글)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
 				},
 				{
 					"id":"Co1.2.1.1.1P",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리 > 매장정보등록 > 쇼핑 > 우편번호찾기(한글)",
-					"pageUrl":"http://not-implemented.com",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 매장등록(한글) > 우편번호찾기",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
 					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"percent":"0",
+					"state":"진행중"
 				},
 				{
 					"id":"Co1.2.1.1.2P",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리 > 매장정보등록 > 쇼핑 > 위도/경도조회(한글)",
-					"pageUrl":"http://not-implemented.com",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 매장등록(한글) > 위도/경도조회",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
 					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"percent":"0",
+					"state":"진행중"
 				},
 				{
 					"id":"Co1.2.1.1.3.P",
-					"category":"관리자_컨텐츠",
-					"name":"상품관리 > 매장정보등록 > 쇼핑 > 지역선택안내(한글)",
-					"pageUrl":"http://not-implemented.com",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 매장등록(한글) > 지역선택안내",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
 					"description":"설명이 아직 없습니다.",
-					"state":"진행중",
-					"percent":50
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Co1.2.3.2T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 매장등록(간체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Co1.2.3.3T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 매장등록(번체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Co1.2.3.4T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 매장등록(영어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Co1.2.3.5T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 매장등록(일어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.4.2",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > BestPick관리",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.4.2.1L",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > BestPick관리 > 상품검색팝업",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.4.3",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 스페셜쿠폰관리",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.4.3.1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 브랜드관관리 > 스페셜쿠폰관리 > 스페셜쿠폰등록",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 상품관리",
+					"type":"conceptual",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.1T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 상품관리 > 트렌드",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.2T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 상품관리 > 트렌드 > 뷰티",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.2.1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 상품관리 > 트렌드 > 뷰티 > 상품등록",
+					"type":"conceptual",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.2.1.1T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 상품관리 > 트렌드 > 뷰티 > 상품등록(한글)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.2.1.2T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 상품관리 > 트렌드 > 뷰티 > 상품등록(간체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.2.1.3T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 상품관리 > 트렌드 > 뷰티 > 상품등록(번체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.2.1.4T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 상품관리 > 트렌드 > 뷰티 > 상품등록(영어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.2.1.5T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 상품관리 > 트렌드 > 뷰티 > 상품등록(일어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.2.1.5.1T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 상품관리 > 트렌드 > 뷰티 > 상품등록 > 태그선택팝업",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.2.2L",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 상품관리 > 트렌드 > 뷰티 > 반려사유안내팝업",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.6",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 세일관리",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.6.1T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 세일관리 > 트렌드",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.6.2T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 세일관리 > 트렌드 > 뷰티",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.2.2",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 세일관리 > 트렌드 > 뷰티 > 세일등록",
+					"type":"conceptual",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.2.1.1T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 세일관리 > 트렌드 > 뷰티 > 세일등록(한글)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.2.1.2T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 세일관리 > 트렌드 > 뷰티 > 세일등록(간체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.2.1.3T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 세일관리 > 트렌드 > 뷰티 > 세일등록(번체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.2.1.4T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 세일관리 > 트렌드 > 뷰티 > 세일등록(영어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.2.1.5T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 세일관리 > 트렌드 > 뷰티 > 세일등록(일어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.5.2.2L",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 세일관리 > 트렌드 > 뷰티 > 반려사유안내팝업",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.6",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 쿠폰관리",
+					"type":"conceptual",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.6.1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 쿠폰관리 > 스페셜쿠폰관리",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.6.1.1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 쿠폰관리 > 스페셜쿠폰관리 > 스페셜쿠폰등록",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.6.2",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 쿠폰관리 > 스페셜쿠폰관리 > 할인율관리",
+					"type":"conceptual",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.6.2.1T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 쿠폰관리 > 스페셜쿠폰관리 > 할인율관리 > 적용",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.6.2.2T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 쿠폰관리 > 스페셜쿠폰관리 > 할인율관리 > 요청",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.6.2.2.1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 쿠폰관리 > 스페셜쿠폰관리 > 할인율관리 > 요청 > 할인율등록",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.6.2.2.2",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 쿠폰관리 > 스페셜쿠폰관리 > 할인율관리 > 요청 > 할인율추가요청",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.7",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 테그관리",
+					"type":"conceptual",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.7.1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 테그관리 > 태그등록현황",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.7.1.1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 테그관리 > 태그등록현황 > 태그등록",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.7.2",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 테그관리 > 핫키워드관리",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.7.2.1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 테그관리 > 핫키워드관리 > 키워드등록",
+					"type":"conceptual",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.7.2.1T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 테그관리 > 핫키워드관리 > 키워드등록(한글)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.7.2.2T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 테그관리 > 핫키워드관리 > 키워드등록(간체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.7.2.3T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 테그관리 > 핫키워드관리 > 키워드등록(번체)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.7.2.4T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 테그관리 > 핫키워드관리 > 키워드등록(영어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.7.2.5T",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 테그관리 > 핫키워드관리 > 키워드등록(일어)",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.8",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 문의",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
+				},
+				{
+					"id":"Sp1.8.1",
+					"category":"관리자_쇼핑앱",
+					"name":"쇼핑앱 > 문의 > 문의 등록",
+					"type":"normal",
+					"pageUrl":"http://regexr.com/foo.html?q=bar",
+					"description":"설명이 아직 없습니다.",
+					"percent":"0",
+					"state":"진행중"
 				}
 			]
 		},
@@ -297,38 +1642,17 @@
 					"id": "page1",
 					"category": "사용자",
 					"name": "메인",
-					"pageUrl": "http://not-implemented.com",
+					"type": "normal",
+					"pageUrl": "http://pengtai.geeky.kr/user/",
 					"description": "설명이 아직 없습니다.",
-					"percent": 50,
+					"percent": 0,
 					"state": "진행중"
 				},
 				{
 					"id": "page1",
 					"category": "사용자",
 					"name": "메인/세부",
-					"pageUrl": "http://regexr.com/foo.html?q=bar",
-					"description": "설명이 아직 없습니다.",
-					"percent": 43,
-					"state": "진행중"
-				}
-			]
-		},
-		{
-			"name": "기타",
-			"data": [
-				{
-					"id": "page1",
-					"category": "기타",
-					"name": "페이지13",
-					"pageUrl": "http://not-implemented.com",
-					"description": "설명이 아직 없습니다.",
-					"percent": 50,
-					"state": "진행중"
-				},
-				{
-					"id": "page1",
-					"category": "기타",
-					"name": "Tiancum",
+					"type": "normal",
 					"pageUrl": "http://regexr.com/foo.html?q=bar",
 					"description": "설명이 아직 없습니다.",
 					"percent": 43,

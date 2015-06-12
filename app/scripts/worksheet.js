@@ -11,8 +11,9 @@ angular.module('nWorkSheet', ['ngTable'])
 				worksheetParams : '=',
 				nwsDataUrl : '='
 			},
-			link : function(scope)
+			link : function(scope, element)
 			{
+				scope.nwsElement =element;
 
 				scope.dashboardData = {}; // 대시보드용 데이터
 				scope.groupBy = 'category'; // 그룹화 시킬 필터 데이터
@@ -57,9 +58,9 @@ angular.module('nWorkSheet', ['ngTable'])
 					var catInfo = {},
 						totalInfo = {
 							count : 0,
-							done : 0,
+							percent : 0,
 							average : 0,
-							undone : []
+							//state : {}
 						};
 
 					// count meta category and put data
@@ -71,7 +72,7 @@ angular.module('nWorkSheet', ['ngTable'])
 						};
 
 						var count = 0,
-							done = 0,
+							percent = 0,
 							average = 0,
 							undone = [],
 							modifying = [],
@@ -85,7 +86,7 @@ angular.module('nWorkSheet', ['ngTable'])
 								if(item.category === itemToPut.name)
 								{
 									count ++;
-									done += item.done;
+									percent += item.percent;
 
 									if(item.state === '진행중')
 									{undone.push(item.name);}
@@ -99,12 +100,12 @@ angular.module('nWorkSheet', ['ngTable'])
 
 							}
 						}
-						average = (done / (count));
+						average = (percent / (count));
 
 						$.extend(itemToPut, {
 							count : count,
-							done :done,
-							average : average,
+							percent :percent,
+							average : Math.floor(average),
 							state : {
 								undone : undone,
 								modifying : modifying,
@@ -117,14 +118,21 @@ angular.module('nWorkSheet', ['ngTable'])
 						catInfo[itemToPut.name] = itemToPut;
 
 					}
-
-					for(var c = 0; c < catInfo.length ; c ++ )
+					for(var cati in catInfo)
 					{
-						totalInfo.count += catInfo[c].count;
-						totalInfo.done += catInfo[c].done;
-						$.extend(totalInfo.n, catInfo[c].n) ;
+						totalInfo.count += catInfo[cati].count;
+						totalInfo.percent += catInfo[cati].percent;
+						//$.extend(totalInfo.state, catInfo[cati].state) ;
 					}
-					totalInfo.average = totalInfo.done/ totalInfo.count;
+					//for(var c = 0; c < catInfo.length ; c ++ )
+					//{
+					//	totalInfo.count += catInfo[c].count;
+					//	totalInfo.done += catInfo[c].done;
+					//	$.extend(totalInfo.n, catInfo[c].n) ;
+					//}
+					totalInfo.average =  totalInfo.percent/ totalInfo.count;
+					totalInfo.average.toFixed(3);
+					console.log(totalInfo.average);
 
 					return{
 						totalInfo : totalInfo,
@@ -169,8 +177,9 @@ angular.module('nWorkSheet', ['ngTable'])
 					if(position <= 0 )
 					{
 						target.find('ul').css({
-							position : 'fixed',
-							top : margin
+							position : 'absolute',
+							top : -position + margin,
+							transition : '.5s top'
 						});
 
 					}else
@@ -178,7 +187,8 @@ angular.module('nWorkSheet', ['ngTable'])
 
 						target.find('ul').css({
 							position : 'inherit',
-							top : 'inherit'
+							top : 'inherit',
+							transition : '.5s top'
 						});
 					}
 				});
@@ -270,11 +280,6 @@ angular.module('nWorkSheet', ['ngTable'])
 					}
 				};
 
-				var replace = function()
-				{
-
-				};
-
 				triggerRelink();
 
 				scope.$on('dataLoaded', function(event, option){
@@ -283,8 +288,6 @@ angular.module('nWorkSheet', ['ngTable'])
 					scope.option = option;
 
 					scope.tableParams.reload();
-
-					replace();
 				});
 				scope.$on('changed', function(event, option){
 					scope.getData(option);
@@ -293,8 +296,7 @@ angular.module('nWorkSheet', ['ngTable'])
 
 					scope.tableParams.reload();
 
-
-					replace();
+					$(window).scrollTop($(scope.nwsElement).offset().top);
 				});
 			}
 		};
