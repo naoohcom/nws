@@ -1606,7 +1606,7 @@
 					"pageUrl":"http://pengtai.geeky.kr/user/views/common/popup/popup.html",
 					"description":"아직 설명이 없음.",
 					"issue":"이슈사항 없음",
-					"percent":100,
+					"percent":90,
 					"state":"완료"
 				},
 				{
@@ -1650,7 +1650,7 @@
 					"pageUrl":"페이지 뎁스입니다.",
 					"description":"퀵메뉴",
 					"issue":"이슈사항 없음",
-					"percent":100,
+					"percent":90,
 					"state":"완료"
 				},
 				{
@@ -1661,7 +1661,7 @@
 					"pageUrl":"페이지 뎁스입니다.",
 					"description":"퀵메뉴의 홈입니다.",
 					"issue":"이슈사항 없음",
-					"percent":100,
+					"percent":90,
 					"state":"완료"
 				},
 				{
@@ -1672,7 +1672,7 @@
 					"pageUrl":"http://pengtai.geeky.kr/user/views/common/main-category.html",
 					"description":"아직 설명이 없음.",
 					"issue":"이슈사항 없음",
-					"percent":100,
+					"percent":90,
 					"state":"완료"
 				},
 				{
@@ -1680,10 +1680,10 @@
 					"category":"사용자_공통",
 					"name":"메인 > 퀵메뉴 > 지역별브랜드",
 					"type":"normal",
-					"pageUrl":"http://pengtai.geeky.kr/user/views/common/local-brand.html",
+					"pageUrl":"http://pengtai.geeky.kr/user/views/common/localbrand.html",
 					"description":"아직 설명이 없음.",
 					"issue":"프론트 개발 단계에서 처리해야 하는부분",
-					"percent":80,
+					"percent":90,
 					"state":"완료"
 				},
 				{
@@ -1694,7 +1694,7 @@
 					"pageUrl":"http://pengtai.geeky.kr/user/views/common/brand.html",
 					"description":"아직 설명이 없음.",
 					"issue":"이슈사항 없음",
-					"percent":100,
+					"percent":90,
 					"state":"완료"
 				},
 				{
@@ -1705,7 +1705,7 @@
 					"pageUrl":"페이지 뎁스입니다.",
 					"description":"아직 설명이 없음.",
 					"issue":"이슈사항 없음",
-					"percent":100,
+					"percent":90,
 					"state":"완료"
 				},
 				{
@@ -1738,8 +1738,8 @@
 					"pageUrl":"http://pengtai.geeky.kr/user/views/common/special-offer.html",
 					"description":"아직 설명이 없음.",
 					"issue":"수정사항이 추가 요청되어 다시 진행해야 할듯 합니다.",
-					"percent":50,
-					"state":"진행중"
+					"percent":90,
+					"state":"완료"
 				},
 				{
 					"id":"Gr2.2.5",
@@ -1749,8 +1749,8 @@
 					"pageUrl":"http://pengtai.geeky.kr/user/views/common/more.html",
 					"description":"아직 설명이 없음.",
 					"issue":"가이드를 제가 못찾는 건지 찾기가 힘드네요 ㅠ",
-					"percent":60,
-					"state":"진행중"
+					"percent":80,
+					"state":"완료"
 				},
 				{
 					"id":"Gr2.2.5.1",
@@ -1760,7 +1760,7 @@
 					"pageUrl":"http://pengtai.geeky.kr/user/views/common/notice.html",
 					"description":"아직 설명이 없음.",
 					"issue":"이슈사항 없음",
-					"percent":100,
+					"percent":90,
 					"state":"완료"
 				},
 				{
@@ -1770,8 +1770,8 @@
 					"type":"normal",
 					"pageUrl":"http://pengtai.geeky.kr/user/views/common/help.html",
 					"description":"아직 설명이 없음.",
-					"issue":"이슈사항 없음",
-					"percent":10,
+					"issue":"도움말에 대한 화면이 없네요... 디자인 파일이 누락된것 같습니다.",
+					"percent":0,
 					"state":"진행중"
 				},
 				{
@@ -1782,18 +1782,18 @@
 					"pageUrl":"http://pengtai.geeky.kr/user/views/common/language.html",
 					"description":"아직 설명이 없음.",
 					"issue":"이슈사항 없음",
-					"percent":30,
-					"state":"진행중"
+					"percent":90,
+					"state":"완료"
 				},
 				{
 					"id":"Gr2.2.5.4",
 					"category":"사용자_공통",
 					"name":"메인 > 퀵메뉴 > 더보기 > 추천앱",
 					"type":"conceptual",
-					"pageUrl":"아직 만들어지지 않음",
+					"pageUrl":"페이지 뎁스입니다.",
 					"description":"아직 설명이 없음.",
 					"issue":"이슈사항 없음",
-					"percent":100,
+					"percent":90,
 					"state":"완료"
 				},
 				{
@@ -1801,10 +1801,10 @@
 					"category":"사용자_공통",
 					"name":"에러페이지",
 					"type":"conceptual",
-					"pageUrl":"아직 만들어지지 않음",
+					"pageUrl":"페이지 뎁스입니다.",
 					"description":"아직 설명이 없음.",
 					"issue":"이슈사항 없음",
-					"percent":100,
+					"percent":90,
 					"state":"완료"
 				},
 				{
