@@ -12,12 +12,12 @@
 				<li>{{ dashboardData.categoryInfo }}</li>
 				<li ng-repeat="categoryItem in dashboardData.categoryInfo">{{categoryItem}}</li>
 			</ul>-->
-			<p>대시보드 작성 중입니다.</p>
+			<p>대시보드 작성 입니다.</p>
 
 			<p>잠시만 기다려주세요. 완성되는데로 업로드 하겠습니다.</p>
 			<br/>
 			<p class="nws-dashboard-percent">전체 완료도 : {{ dashboardData.totalInfo.average }} %</p>
-			<p class="nws-dashboard-percent">진행중인 페이지 : {{ dashboardData.totalInfo.count }} 개</p>
+			<p class="nws-dashboard-percent">진행인 페이지 : {{ dashboardData.totalInfo.count }} 개</p>
 		</div>
 
 		<h2><strong>Category :</strong> {{categoryName === null ? '전체' : categoryName}}</h2>
@@ -61,11 +61,16 @@
 				</ul>
 			</script>
 			<div loading-container="tableParams.settings().$loading">
+
+				<!-- 한개의 테이블만 나와야 할 경우 -->
 				<div ng-if="option.type === 'one'">
 					<table ng-table="tableParams" class="table">
 						<thead>
 						<tr>
-							<th ng-repeat="(key, value) in tableParams.data[0]">{{ key }}</th>
+							<th ng-class="{
+								'name' : key === 'name',
+								'issue' : key === 'issue'
+							}" ng-repeat="(key, value) in tableParams.data[0]">{{ key }}</th>
 						</tr>
 						</thead>
 						<tr ng-repeat="(key, value) in tableParams.data">
@@ -110,7 +115,10 @@
 							</td>
 						</tr>
 						<tr>
-							<th ng-repeat="(k, v) in group.data[0]">{{ k }}</th>
+							<th ng-class="{
+								'name' : k === 'name',
+								'issue' : k === 'issue'
+							}" ng-repeat="(k, v) in group.data[0]">{{ k }}</th>
 						</tr>
 						<tr ng-hide="group.$hideRows" ng-repeat="(key, user) in group.data | filter:filter">
 

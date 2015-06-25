@@ -201,6 +201,12 @@ a img {
 .nws-body table thead {
   background: #e9e9e9;
 }
+.nws-body table .name {
+  min-width: 300px;
+}
+.nws-body table .issue {
+  max-width: 150px;
+}
 .nws-body table tr:nth-child(even) {
   background: #f0f0f0;
 }
@@ -221,6 +227,9 @@ a img {
 }
 .nws-body table tr td .delete {
   background: #d06255;
+}
+.nws-body table tr td .standby {
+  background: #cccccc;
 }
 .nws-body table .modifying {
   background: #ffffbe !important;

@@ -29,6 +29,35 @@ angular.module('nWorkSheet', ['ngTable'])
 					return re.test(text);
 				};
 
+				/**
+				 * 링크 텍스트들이 여러개 일 경우를 대비하여 링크를 만든다.
+				 * @param {String} text
+				 * @returns {Array} 결과값
+				 */
+				scope.makeLinkText = function ( text )
+				{
+					if(typeof text === 'string'){
+						var result = []; // 마지막에 리턴할 어레이
+
+						var array = text.split(','); // 파라미터로 넘어온 텍스트를 ,으로 나눈다.
+
+						$.each(array, function(index, value){ // 각 어레이 값들을 result 안에 넣어준다.
+							result.push({
+								isHref : scope.httpreg(value),
+								text : value
+							});
+						});
+
+						return result; // 결과값 리턴
+					}else{
+						return [{
+							isHref : false,
+							text : text
+						}];
+					}
+
+				};
+
 				// nwsDataUrl 가 undefined 이거나, worksheetParams 가 undefined 면 다음을 실행한다.
 				if(scope.nwsDataUrl !== undefined && scope.worksheetParams === undefined)
 				{
